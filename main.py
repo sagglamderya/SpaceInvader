@@ -1,3 +1,4 @@
+from pip import main
 import pygame 
 import random
 import time
@@ -77,9 +78,9 @@ while running:
                     if bullet[2]=="ready":
                         bullet[2] = "fire"
                         mixer.Sound("laser.wav").play()
-                        bullet[1]-=0.6+score*0.03
+                        bullet[1]-=0.6+score*0.031
                         fire_bullet(bullet)
-                        break
+                        break   
         if event.type==pygame.KEYUP:
             if event.key==pygame.K_LEFT or event.key== pygame.K_RIGHT:
                 playerX_Change=0
